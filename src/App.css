@@ -1,38 +1,182 @@
-.App {
-  text-align: center;
+/* 가운데정렬은 70% */
+
+.Home{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Topbar *****************************************************************************************************/
+.Topbar{
+    width: 70%;
+    display: flex;
+}
+.Topbar-left{
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+.Topbar-logo{
+    width: 15%;
+    cursor: pointer;
+}
+.Topbar-title{
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(78, 78, 78);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Topbar-center{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.Topbar-searchbox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(51, 51, 51, 0);
+    background-color: rgba(0, 0, 0, 0.13);
+    border-radius: 15px;
+    width: 50%;
+    height: 50%;
+    padding: 0px 10px;
+}
+.Topbar-search-input{
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+.Topbar-search-input:focus{
+    outline: none;
+}
+.Topbar-search-SearchIcon{
+    color: rgba(0, 0, 0, 0.411);
+    cursor: pointer;
+    font-size: 20px !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Topbar-right{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+.Topbar-righticons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-right: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Category *****************************************************************************************************/
+.Category{
+    width: 100%;
+    border-top: 0.5px solid rgba(51, 51, 51, 0.192);
+    border-bottom: 0.5px solid rgba(51, 51, 51, 0.192);
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+}
+.Category-bar{
+    width: 70%;
+    display: flex;
+}
+.Category-bar-dropbar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 5%;
+}
+.Category-bar-dropbar-MenuIcon{
+    padding: 5px;
+    border-left: 1px solid rgba(51, 51, 51, 0.192);
+    border-right: 1px solid rgba(51, 51, 51, 0.192);
+    cursor: pointer;
+}
+.Category-bar-menu{
+    width: calc( 65% / 5 );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.Category-bar-menu-last{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Slide */
+.Slide{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+.Slides{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    transition: all .5s ease;
+}
+/* Slidein */
+.Slide-box{
+    width: 100%;
+    height: 400px;
+}
+.Slide-box-in{
+    margin: 0px 460px;
+    display: flex;
+}
+.Slide-box-in-img{
+    width: 400px
+}
+.Slide-box-in-text{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Slide button */
+.Slide-ChevronLeftIcon{
+    position: absolute;
+    top: 160px;
+    left: 300px;
+    width: 50px !important;
+    height: 50px !important;
+    border: 1px solid rgba(51, 51, 51, 0);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 99;
+}
+.Slide-ChevronLeftIcon:hover{
+    background-color: rgba(0, 0, 0, 0.315);
+    transition: all .5s ease;
+}
+.Slide-ChevronRightIcon{
+    position: absolute;
+    top: 160px;
+    left: 1500px;
+    width: 50px !important;
+    height: 50px !important;
+    border: 1px solid rgba(51, 51, 51, 0);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.Slide-ChevronRightIcon:hover{
+    background-color: rgba(0, 0, 0, 0.315);
+    transition: all .5s ease;
 }
